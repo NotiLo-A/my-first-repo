@@ -1,0 +1,21 @@
+{
+  "name": "my-first-repo",
+  "version": "1.0.0",
+  "description": "Привет! Меня зовут Даник. Я учусь пользоваться Git и GitHub. owo contacts: t.me/hita_u",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NotiLo-A/my-first-repo.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NotiLo-A/my-first-repo/issues"
+  },
+  "homepage": "https://github.com/NotiLo-A/my-first-repo#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0"
+  }
+}
