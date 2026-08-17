@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+import { test, expect } from '@playwright/test';
 
 test.describe('Авторизация на Sauce Demo', () => {
   test('Пользователь должен успешно войти в систему', async ({ page }) => {
