@@ -6,7 +6,7 @@ import { CheckoutStepOnePage } from '../pages/CheckoutStepOnePage';
 import { CheckoutStepTwoPage } from '../pages/CheckoutStepTwoPage';
 import { CheckoutCompletePage } from '../pages/CheckoutCompletePage';
 
-test.describe('E2E тест для saucedemo.com', () => {
+test.describe('E2E тест для saucedemo.com', { tag: '@ui' }, () => {
     test('покупка самого дорогого товара', async ({ page }) => {
         const loginPage = new LoginPage(page);
         const inventoryPage = new InventoryPage(page);
