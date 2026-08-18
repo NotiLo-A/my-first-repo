@@ -1,5 +1,13 @@
+import { Page, Locator } from '@playwright/test';
+
 export class CheckoutStepOnePage {
-    constructor(page) {
+    page: Page;
+    firstNameInput: Locator;
+    lastNameInput: Locator;
+    postalCodeInput: Locator;
+    continueButton: Locator;
+
+    constructor(page: Page) {
         this.page = page;
         this.firstNameInput = page.locator('#first-name');
         this.lastNameInput = page.locator('#last-name');
@@ -7,7 +15,7 @@ export class CheckoutStepOnePage {
         this.continueButton = page.locator('#continue');
     }
 
-    async fillUserInfo(firstName, lastName, postalCode) {
+    async fillUserInfo(firstName: string, lastName: string, postalCode: string) {
         await this.firstNameInput.fill(firstName);
         await this.lastNameInput.fill(lastName);
         await this.postalCodeInput.fill(postalCode);

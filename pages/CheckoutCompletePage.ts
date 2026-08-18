@@ -1,5 +1,11 @@
+import { Page, Locator } from '@playwright/test';
+
 export class CheckoutCompletePage {
-    constructor(page) {
+    page: Page;
+    completeHeader: Locator;
+    backHomeButton: Locator;
+
+    constructor(page: Page) {
         this.page = page;
         this.completeHeader = page.locator('.complete-header');
         this.backHomeButton = page.locator('#back-to-products');

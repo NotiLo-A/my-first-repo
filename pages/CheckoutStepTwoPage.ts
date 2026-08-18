@@ -1,5 +1,12 @@
+import { Page, Locator } from '@playwright/test';
+
 export class CheckoutStepTwoPage {
-    constructor(page) {
+    page: Page;
+    summaryInfo: Locator;
+    totalLabel: Locator;
+    finishButton: Locator;
+
+    constructor(page: Page) {
         this.page = page;
         this.summaryInfo = page.locator('.summary_info');
         this.totalLabel = page.locator('.summary_total_label');

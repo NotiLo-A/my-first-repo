@@ -1,5 +1,13 @@
+import { Page, Locator } from '@playwright/test';
+
 export class InventoryPage {
-    constructor(page) {
+    page: Page;
+    pageTitle: Locator;
+    cartIcon: Locator;
+    sortDropdown: Locator;
+    inventoryItems: Locator;
+
+    constructor(page: Page) {
         this.page = page;
         this.pageTitle = page.locator('.title');
         this.cartIcon = page.locator('.shopping_cart_link');
@@ -20,7 +28,7 @@ export class InventoryPage {
         return this.inventoryItems.first().locator('.inventory_item_name').textContent();
     }
 
-    async addItemToCart(itemName) {
+    async addItemToCart(itemName: string) {
         const item = this.inventoryItems.filter({ hasText: itemName });
         await item.getByRole('button', { name: 'Add to cart' }).click();
     }
