@@ -1,6 +1,6 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, Page } from '@playwright/test';
 
-test.describe('Авторизация на Sauce Demo', () => {
+test.describe('Авторизация на Sauce Demo', { tag: '@ui' }, () => {
   test('Пользователь должен успешно войти в систему', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/');
 
